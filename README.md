@@ -21,7 +21,7 @@ A Verilog implementation of an AMBA APB slave peripheral, compliant with the cla
    PADDR   ───────►│   (Register File  │
    PWDATA  ───────►│    NUM_REGS x     │
    PSTRB   ───────►│    DATA_WIDTH)    │
-                    └───────────────────┘
+                   └───────────────────┘
 ```
 
 ## Module Interface — `apb_slave`
