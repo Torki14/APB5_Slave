@@ -60,7 +60,7 @@ A Verilog implementation of an AMBA APB slave peripheral, compliant with the cla
 
 An access is valid only if it is **aligned** and `reg_idx` is **in range** (`< NUM_REGS`). Invalid accesses assert `PSLVERR` once `PREADY` completes the transfer.
 
-## Verification
+## Testbench
 
 `apb_slave_tb.v` is a directed testbench that:
 1. Preloads the register file from `regfile_init.dat`.
