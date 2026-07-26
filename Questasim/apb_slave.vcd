@@ -1,0 +1,739 @@
+$date
+	Sun Jul 26 01:10:52 2026
+$end
+$version
+	QuestaSim Version 2021.1
+$end
+$timescale
+	1ns
+$end
+
+$scope module apb_slave_tb $end
+$var parameter 32 ! NUM_REGS $end
+$var reg 1 " PCLK $end
+$var reg 1 # PRESETn $end
+$var reg 1 $ PSEL $end
+$var reg 1 % PENABLE $end
+$var reg 1 & PWRITE $end
+$var reg 32 ' PADDR [31:0] $end
+$var reg 32 ( PWDATA [31:0] $end
+$var reg 4 ) PSTRB [3:0] $end
+$var wire 1 * PRDATA [31] $end
+$var wire 1 + PRDATA [30] $end
+$var wire 1 , PRDATA [29] $end
+$var wire 1 - PRDATA [28] $end
+$var wire 1 . PRDATA [27] $end
+$var wire 1 / PRDATA [26] $end
+$var wire 1 0 PRDATA [25] $end
+$var wire 1 1 PRDATA [24] $end
+$var wire 1 2 PRDATA [23] $end
+$var wire 1 3 PRDATA [22] $end
+$var wire 1 4 PRDATA [21] $end
+$var wire 1 5 PRDATA [20] $end
+$var wire 1 6 PRDATA [19] $end
+$var wire 1 7 PRDATA [18] $end
+$var wire 1 8 PRDATA [17] $end
+$var wire 1 9 PRDATA [16] $end
+$var wire 1 : PRDATA [15] $end
+$var wire 1 ; PRDATA [14] $end
+$var wire 1 < PRDATA [13] $end
+$var wire 1 = PRDATA [12] $end
+$var wire 1 > PRDATA [11] $end
+$var wire 1 ? PRDATA [10] $end
+$var wire 1 @ PRDATA [9] $end
+$var wire 1 A PRDATA [8] $end
+$var wire 1 B PRDATA [7] $end
+$var wire 1 C PRDATA [6] $end
+$var wire 1 D PRDATA [5] $end
+$var wire 1 E PRDATA [4] $end
+$var wire 1 F PRDATA [3] $end
+$var wire 1 G PRDATA [2] $end
+$var wire 1 H PRDATA [1] $end
+$var wire 1 I PRDATA [0] $end
+$var wire 1 J PREADY $end
+$var wire 1 K PSLVERR $end
+
+$scope task do_read $end
+$var reg 32 L addr [31:0] $end
+$upscope $end
+
+$scope task do_write $end
+$var reg 32 M addr [31:0] $end
+$var reg 32 N data [31:0] $end
+$var reg 4 O strb [3:0] $end
+$upscope $end
+
+$scope module dut $end
+$var parameter 32 P ADDR_WIDTH $end
+$var parameter 32 Q DATA_WIDTH $end
+$var parameter 32 R NUM_REGS $end
+$var parameter 32 S WAIT_STATES $end
+$var parameter 3 T IDLE $end
+$var parameter 3 U SETUP $end
+$var parameter 3 V ACCESS $end
+$var parameter 32 W STRB_WIDTH $end
+$var parameter 32 X REGS_IDXs $end
+$var parameter 32 Y STRB_IDXs $end
+$var wire 1 Z PCLK $end
+$var wire 1 [ PRESETn $end
+$var wire 1 \ PSEL $end
+$var wire 1 ] PENABLE $end
+$var wire 1 ^ PWRITE $end
+$var wire 1 _ PADDR [31] $end
+$var wire 1 ` PADDR [30] $end
+$var wire 1 a PADDR [29] $end
+$var wire 1 b PADDR [28] $end
+$var wire 1 c PADDR [27] $end
+$var wire 1 d PADDR [26] $end
+$var wire 1 e PADDR [25] $end
+$var wire 1 f PADDR [24] $end
+$var wire 1 g PADDR [23] $end
+$var wire 1 h PADDR [22] $end
+$var wire 1 i PADDR [21] $end
+$var wire 1 j PADDR [20] $end
+$var wire 1 k PADDR [19] $end
+$var wire 1 l PADDR [18] $end
+$var wire 1 m PADDR [17] $end
+$var wire 1 n PADDR [16] $end
+$var wire 1 o PADDR [15] $end
+$var wire 1 p PADDR [14] $end
+$var wire 1 q PADDR [13] $end
+$var wire 1 r PADDR [12] $end
+$var wire 1 s PADDR [11] $end
+$var wire 1 t PADDR [10] $end
+$var wire 1 u PADDR [9] $end
+$var wire 1 v PADDR [8] $end
+$var wire 1 w PADDR [7] $end
+$var wire 1 x PADDR [6] $end
+$var wire 1 y PADDR [5] $end
+$var wire 1 z PADDR [4] $end
+$var wire 1 { PADDR [3] $end
+$var wire 1 | PADDR [2] $end
+$var wire 1 } PADDR [1] $end
+$var wire 1 ~ PADDR [0] $end
+$var wire 1 !! PWDATA [31] $end
+$var wire 1 "! PWDATA [30] $end
+$var wire 1 #! PWDATA [29] $end
+$var wire 1 $! PWDATA [28] $end
+$var wire 1 %! PWDATA [27] $end
+$var wire 1 &! PWDATA [26] $end
+$var wire 1 '! PWDATA [25] $end
+$var wire 1 (! PWDATA [24] $end
+$var wire 1 )! PWDATA [23] $end
+$var wire 1 *! PWDATA [22] $end
+$var wire 1 +! PWDATA [21] $end
+$var wire 1 ,! PWDATA [20] $end
+$var wire 1 -! PWDATA [19] $end
+$var wire 1 .! PWDATA [18] $end
+$var wire 1 /! PWDATA [17] $end
+$var wire 1 0! PWDATA [16] $end
+$var wire 1 1! PWDATA [15] $end
+$var wire 1 2! PWDATA [14] $end
+$var wire 1 3! PWDATA [13] $end
+$var wire 1 4! PWDATA [12] $end
+$var wire 1 5! PWDATA [11] $end
+$var wire 1 6! PWDATA [10] $end
+$var wire 1 7! PWDATA [9] $end
+$var wire 1 8! PWDATA [8] $end
+$var wire 1 9! PWDATA [7] $end
+$var wire 1 :! PWDATA [6] $end
+$var wire 1 ;! PWDATA [5] $end
+$var wire 1 <! PWDATA [4] $end
+$var wire 1 =! PWDATA [3] $end
+$var wire 1 >! PWDATA [2] $end
+$var wire 1 ?! PWDATA [1] $end
+$var wire 1 @! PWDATA [0] $end
+$var wire 1 A! PSTRB [3] $end
+$var wire 1 B! PSTRB [2] $end
+$var wire 1 C! PSTRB [1] $end
+$var wire 1 D! PSTRB [0] $end
+$var reg 32 E! PRDATA [31:0] $end
+$var reg 1 F! PREADY $end
+$var reg 1 G! PSLVERR $end
+$var wire 1 H! reg_idx [3] $end
+$var wire 1 I! reg_idx [2] $end
+$var wire 1 J! reg_idx [1] $end
+$var wire 1 K! reg_idx [0] $end
+$var reg 3 L! STATE_REG [2:0] $end
+$var reg 3 M! NEXT_STATE [2:0] $end
+$var wire 1 N! aligned $end
+$var wire 1 O! in_rage $end
+$var wire 1 P! address_valid $end
+$var integer 32 Q! WAIT_COUNTER $end
+$var integer 32 R! i $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0"
+0#
+0$
+0%
+0&
+b0 '
+b0 (
+b0 )
+b0 E!
+0F!
+0G!
+b1 L!
+b1 M!
+bx L
+bx M
+bx N
+bx O
+b10000 !
+b100000 P
+b100000 Q
+b10000 R
+b0 S
+b1 T
+b10 U
+b100 V
+b100 W
+b100 X
+b10 Y
+b0 Q!
+b10000 R!
+0I
+0H
+0G
+0F
+0E
+0D
+0C
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0J
+0K
+0K!
+0J!
+0I!
+0H!
+1N!
+1O!
+1P!
+0D!
+0C!
+0B!
+0A!
+0@!
+0?!
+0>!
+0=!
+0<!
+0;!
+0:!
+09!
+08!
+07!
+06!
+05!
+04!
+03!
+02!
+01!
+00!
+0/!
+0.!
+0-!
+0,!
+0+!
+0*!
+0)!
+0(!
+0'!
+0&!
+0%!
+0$!
+0#!
+0"!
+0!!
+0~
+0}
+0|
+0{
+0z
+0y
+0x
+0w
+0v
+0u
+0t
+0s
+0r
+0q
+0p
+0o
+0n
+0m
+0l
+0k
+0j
+0i
+0h
+0g
+0f
+0e
+0d
+0c
+0b
+0a
+0`
+0_
+0^
+0]
+0\
+0[
+0Z
+$end
+#5
+1"
+1Z
+b0 R!
+b1 R!
+b10 R!
+b11 R!
+b100 R!
+b101 R!
+b110 R!
+b111 R!
+b1000 R!
+b1001 R!
+b1010 R!
+b1011 R!
+b1100 R!
+b1101 R!
+b1110 R!
+b1111 R!
+b10000 R!
+#10
+0"
+0Z
+#12
+1#
+1[
+#15
+1"
+1Z
+#20
+0"
+0Z
+#22
+1$
+b0 L
+1\
+b10 M!
+#25
+1"
+1Z
+b10 L!
+b1 M!
+#30
+0"
+0Z
+#35
+1"
+1Z
+1%
+1]
+1F!
+b11011110101011011011111011101111 E!
+b100 M!
+1J
+1I
+1H
+1G
+1F
+1D
+1C
+1B
+1@
+1?
+1>
+1=
+1<
+1:
+19
+17
+16
+14
+12
+10
+1/
+1.
+1-
+1+
+1*
+b1 L!
+0F!
+b0 E!
+b11011110101011011011111011101111 E!
+b1 M!
+0J
+#40
+0"
+0Z
+#45
+1"
+1Z
+0%
+b100 L
+0]
+b0 E!
+b10 M!
+0I
+0H
+0G
+0F
+0D
+0C
+0B
+0@
+0?
+0>
+0=
+0<
+0:
+09
+07
+06
+04
+02
+00
+0/
+0.
+0-
+0+
+0*
+#50
+0"
+0Z
+#55
+1"
+1Z
+b100 '
+1|
+1K!
+b10 L!
+b1 M!
+#60
+0"
+0Z
+#65
+1"
+1Z
+1%
+1]
+1F!
+b11001010111111101111000000001101 E!
+b100 M!
+1J
+1I
+1G
+1F
+1=
+1<
+1;
+1:
+18
+17
+16
+15
+14
+13
+12
+10
+1.
+1+
+1*
+b1 L!
+0F!
+b0 E!
+b11001010111111101111000000001101 E!
+b1 M!
+0J
+#70
+0"
+0Z
+#75
+1"
+1Z
+0%
+b1000 L
+0]
+b0 E!
+b10 M!
+0I
+0G
+0F
+0=
+0<
+0;
+0:
+08
+07
+06
+05
+04
+03
+02
+00
+0.
+0+
+0*
+#80
+0"
+0Z
+#85
+1"
+1Z
+b1000 '
+0|
+1{
+0K!
+1J!
+b10 L!
+b1 M!
+#90
+0"
+0Z
+#95
+1"
+1Z
+1%
+1]
+1F!
+b10010001101000101011001111000 E!
+b100 M!
+1J
+1F
+1E
+1D
+1C
+1@
+1?
+1=
+1;
+17
+15
+14
+10
+1-
+b1 L!
+0F!
+b0 E!
+b10010001101000101011001111000 E!
+b1 M!
+0J
+#100
+0"
+0Z
+#105
+1"
+1Z
+0%
+b1100 L
+0]
+b0 E!
+b10 M!
+0F
+0E
+0D
+0C
+0@
+0?
+0=
+0;
+07
+05
+04
+00
+0-
+#110
+0"
+0Z
+#115
+1"
+1Z
+b1100 '
+1|
+1K!
+b10 L!
+b1 M!
+#120
+0"
+0Z
+#125
+1"
+1Z
+1%
+1]
+1F!
+b10011010101111001101111011110000 E!
+b100 M!
+1J
+1E
+1D
+1C
+1B
+1@
+1?
+1>
+1=
+1;
+1:
+17
+16
+15
+14
+12
+10
+1.
+1-
+1*
+b1 L!
+0F!
+b0 E!
+b10011010101111001101111011110000 E!
+b1 M!
+0J
+#130
+0"
+0Z
+#135
+1"
+1Z
+0%
+b10000 L
+0]
+b0 E!
+b10 M!
+0E
+0D
+0C
+0B
+0@
+0?
+0>
+0=
+0;
+0:
+07
+06
+05
+04
+02
+00
+0.
+0-
+0*
+#140
+0"
+0Z
+#145
+1"
+1Z
+b10000 '
+0|
+0{
+1z
+0K!
+0J!
+1I!
+b10 L!
+b1 M!
+#150
+0"
+0Z
+#155
+1"
+1Z
+1%
+1]
+1F!
+b1111000011110000111100001111 E!
+b100 M!
+1J
+1I
+1H
+1G
+1F
+1A
+1@
+1?
+1>
+19
+18
+17
+16
+11
+10
+1/
+1.
+b1 L!
+0F!
+b0 E!
+b1111000011110000111100001111 E!
+b1 M!
+0J
+#160
+0"
+0Z
+#165
+1"
+1Z
+0%
+0$
+0]
+0\
+b0 E!
+0I
+0H
+0G
+0F
+0A
+0@
+0?
+0>
+09
+08
+07
+06
+01
+00
+0/
+0.
+#170
+0"
+0Z
+#175
+1"
+1Z
+#180
+0"
+0Z

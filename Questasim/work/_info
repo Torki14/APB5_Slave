@@ -1,0 +1,71 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dD:/Mohamed/Education/Digital_IC_Design/Projects/Projects/APB_Project
+T_opt
+!s110 1785031751
+V[3^7zZ=04e3mMVh]^OB8@0
+04 12 4 work apb_slave_tb fast 0
+=1-7c8ae1c42221-6a656c47-b1-6bac
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2021.1;73
+vapb_slave
+Z3 !s110 1785031748
+!i10b 1
+!s100 V^Wo6Je8FQaCc6knERdb82
+I=b1OlNKQ3lJE46=kAOEZa0
+R1
+w1785031744
+8apb_slave.v
+Fapb_slave.v
+!i122 0
+L0 1 147
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z6 !s108 1785031748.000000
+Z7 !s107 apb_slave_tb.v|apb_slave.v|
+Z8 !s90 -reportprogress|300|apb_slave.v|apb_slave_tb.v|+cover|-covercells|
+!i113 0
+Z9 !s102 +cover -covercells
+Z10 o+cover -covercells -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vapb_slave_tb
+R3
+!i10b 1
+!s100 42e3;C>m]e61idYmGD3G:2
+I8KVeUVXKFHF<1H2X9;IZJ0
+R1
+w1785022253
+8apb_slave_tb.v
+Fapb_slave_tb.v
+!i122 0
+L0 1 173
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R2
