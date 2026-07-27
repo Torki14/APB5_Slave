@@ -73,8 +73,12 @@ An access is valid only if it is **aligned** and `reg_idx` is **in range** (`< N
 
 ```bash
 # ModelSim / QuestaSim
-vlog apb_slave.v apb_slave_tb.v
-vsim -c apb_slave_tb -do "run -all"
+vdel -all
+vlib work 
+vlog  apb_slave.v apb_slave_tb.v +cover -covercells
+vsim -voptargs=+acc work.apb_slave_tb -cover
+add wave *
+run -all
 ```
 
 Make sure `regfile_init.dat` is in the simulation's working directory, since it's loaded via a relative path in the testbench.
