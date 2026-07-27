@@ -15,9 +15,9 @@ A Verilog implementation of an AMBA APB slave peripheral, compliant with the cla
 ```
    PCLK    ───────►┌───────────────────┐
    PRESETn ───────►│                   │
-   PSEL    ───────►│                   │◄─── PREADY
-   PENABLE ───────►│    apb_slave      │◄─── PRDATA
-   PWRITE  ───────►│                   │◄─── PSLVERR
+   PSEL    ───────►│                   │────► PREADY
+   PENABLE ───────►│    apb_slave      │────► PRDATA
+   PWRITE  ───────►│                   │────► PSLVERR
    PADDR   ───────►│   (Register File  │
    PWDATA  ───────►│    NUM_REGS x     │
    PSTRB   ───────►│    DATA_WIDTH)    │
